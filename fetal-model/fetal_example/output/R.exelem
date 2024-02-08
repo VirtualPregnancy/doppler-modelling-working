@@ -1,0 +1,104 @@
+ Group name: fetal
+ Shape.  Dimension=1
+ #Scale factor sets= 0
+ #Nodes=           0
+ #Fields=1
+ 1) resistance, field, rectangular cartesian, #Components=1
+   resistance.  l.Lagrange, no modify, grid based.
+   #xi1=1 
+ Element:            1 0 0
+   Values:
+           0.0       0.0
+ Element:            2 0 0
+   Values:
+           0.0       0.0
+ Element:            3 0 0
+   Values:
+           0.026664474       0.026664474
+ Element:            4 0 0
+   Values:
+           0.0       0.0
+ Element:            5 0 0
+   Values:
+           0.266644736       0.266644736
+ Element:            6 0 0
+   Values:
+           0.0       0.0
+ Element:            7 0 0
+   Values:
+           0.009332566       0.009332566
+ Element:            8 0 0
+   Values:
+           0.015998684       0.015998684
+ Element:            9 0 0
+   Values:
+           0.053328947       0.053328947
+ Element:            10 0 0
+   Values:
+           0.03999671       0.03999671
+ Element:            11 0 0
+   Values:
+           1.066578944       1.066578944
+ Element:            12 0 0
+   Values:
+           0.005332895       0.005332895
+ Element:            13 0 0
+   Values:
+           0.001333224       0.001333224
+ Element:            14 0 0
+   Values:
+           0.007999342       0.007999342
+ Element:            15 0 0
+   Values:
+           10.79911181       10.79911181
+ Element:            16 0 0
+   Values:
+           4.532960512       4.532960512
+ Element:            17 0 0
+   Values:
+           0.466628288       0.466628288
+ Element:            18 0 0
+   Values:
+           0.519957235       0.519957235
+ Element:            19 0 0
+   Values:
+           0.466628288       0.466628288
+ Element:            20 0 0
+   Values:
+           1.799851968       1.799851968
+ Element:            21 0 0
+   Values:
+           0.399967104       0.399967104
+ Element:            22 0 0
+   Values:
+           1.133240128       1.133240128
+ Element:            23 0 0
+   Values:
+           0.653279603       0.653279603
+ Element:            24 0 0
+   Values:
+           0.933256576       0.933256576
+ Element:            25 0 0
+   Values:
+           0.021331579       0.021331579
+ Element:            26 0 0
+   Values:
+           1.866513152       1.866513152
+ Element:            27 0 0
+   Values:
+           0.079993421       0.079993421
+ Element:            28 0 0
+   Values:
+           0.173319078       0.173319078
+ Element:            29 0 0
+   Values:
+           0.0       0.0
+ Element:            30 0 0
+   Values:
+           0.453296051       0.453296051
+ Element:            31 0 0
+   Values:
+           0.066661184       0.066661184
+ Element:            32 0 0
+   Values:
+           0.015998684       0.015998684

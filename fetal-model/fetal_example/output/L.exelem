@@ -1,0 +1,104 @@
+ Group name: fetal
+ Shape.  Dimension=1
+ #Scale factor sets= 0
+ #Nodes=           0
+ #Fields=1
+ 1) L, field, rectangular cartesian, #Components=1
+   L.  l.Lagrange, no modify, grid based.
+   #xi1=1 
+ Element:            1 0 0
+   Values:
+           0.0       0.0
+ Element:            2 0 0
+   Values:
+           0.0       0.0
+ Element:            3 0 0
+   Values:
+           0.0       0.0
+ Element:            4 0 0
+   Values:
+           0.000213       0.000213
+ Element:            5 0 0
+   Values:
+           0.0       0.0
+ Element:            6 0 0
+   Values:
+           0.000213       0.000213
+ Element:            7 0 0
+   Values:
+           0.000266       0.000266
+ Element:            8 0 0
+   Values:
+           0.000266       0.000266
+ Element:            9 0 0
+   Values:
+           0.0       0.0
+ Element:            10 0 0
+   Values:
+           0.0106       0.0106
+ Element:            11 0 0
+   Values:
+           0.0       0.0
+ Element:            12 0 0
+   Values:
+           0.0       0.0
+ Element:            13 0 0
+   Values:
+           0.000798       0.000798
+ Element:            14 0 0
+   Values:
+           0.0       0.0
+ Element:            15 0 0
+   Values:
+           0.0       0.0
+ Element:            16 0 0
+   Values:
+           0.0       0.0
+ Element:            17 0 0
+   Values:
+           0.0       0.0
+ Element:            18 0 0
+   Values:
+           0.0       0.0
+ Element:            19 0 0
+   Values:
+           0.0       0.0
+ Element:            20 0 0
+   Values:
+           0.0       0.0
+ Element:            21 0 0
+   Values:
+           0.0       0.0
+ Element:            22 0 0
+   Values:
+           0.0       0.0
+ Element:            23 0 0
+   Values:
+           0.0       0.0
+ Element:            24 0 0
+   Values:
+           0.0       0.0
+ Element:            25 0 0
+   Values:
+           0.0       0.0
+ Element:            26 0 0
+   Values:
+           0.0       0.0
+ Element:            27 0 0
+   Values:
+           0.0       0.0
+ Element:            28 0 0
+   Values:
+           0.0       0.0
+ Element:            29 0 0
+   Values:
+           0.0       0.0
+ Element:            30 0 0
+   Values:
+           0.0       0.0
+ Element:            31 0 0
+   Values:
+           0.0       0.0
+ Element:            32 0 0
+   Values:
+           0.0       0.0

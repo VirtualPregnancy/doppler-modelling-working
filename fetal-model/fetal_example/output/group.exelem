@@ -1,0 +1,104 @@
+ Group name: fetal
+ Shape.  Dimension=1
+ #Scale factor sets= 0
+ #Nodes=           0
+ #Fields=1
+ 1) group, field, rectangular cartesian, #Components=1
+   group.  l.Lagrange, no modify, grid based.
+   #xi1=1 
+ Element:            1 0 0
+   Values:
+           8       8
+ Element:            2 0 0
+   Values:
+           8       8
+ Element:            3 0 0
+   Values:
+           2       2
+ Element:            4 0 0
+   Values:
+           1       1
+ Element:            5 0 0
+   Values:
+           2       2
+ Element:            6 0 0
+   Values:
+           1       1
+ Element:            7 0 0
+   Values:
+           3       3
+ Element:            8 0 0
+   Values:
+           3       3
+ Element:            9 0 0
+   Values:
+           2       2
+ Element:            10 0 0
+   Values:
+           3       3
+ Element:            11 0 0
+   Values:
+           2       2
+ Element:            12 0 0
+   Values:
+           2       2
+ Element:            13 0 0
+   Values:
+           6       6
+ Element:            14 0 0
+   Values:
+           2       2
+ Element:            15 0 0
+   Values:
+           2       2
+ Element:            16 0 0
+   Values:
+           2       2
+ Element:            17 0 0
+   Values:
+           2       2
+ Element:            18 0 0
+   Values:
+           9       9
+ Element:            19 0 0
+   Values:
+           2       2
+ Element:            20 0 0
+   Values:
+           2       2
+ Element:            21 0 0
+   Values:
+           2       2
+ Element:            22 0 0
+   Values:
+           2       2
+ Element:            23 0 0
+   Values:
+           2       2
+ Element:            24 0 0
+   Values:
+           2       2
+ Element:            25 0 0
+   Values:
+           2       2
+ Element:            26 0 0
+   Values:
+           2       2
+ Element:            27 0 0
+   Values:
+           2       2
+ Element:            28 0 0
+   Values:
+           5       5
+ Element:            29 0 0
+   Values:
+           4       4
+ Element:            30 0 0
+   Values:
+           10       10
+ Element:            31 0 0
+   Values:
+           2       2
+ Element:            32 0 0
+   Values:
+           2       2
