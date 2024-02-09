@@ -9,6 +9,7 @@ import matplotlib.image as mpimg
 from scipy import interpolate
 from scipy.optimize import curve_fit, minimize,least_squares
 from scipy.interpolate import  UnivariateSpline, Akima1DInterpolator, PchipInterpolator
+from scipy.signal import find_peaks
 
 from reprosim.diagnostics import set_diagnostics_level
 from reprosim.indices import perfusion_indices, get_ne_radius
@@ -17,9 +18,11 @@ from reprosim.geometry import append_units,define_node_geometry, define_1d_eleme
 from reprosim.repro_exports import export_1d_elem_geometry, export_node_geometry, export_1d_elem_field,export_node_field,export_terminal_perfusion
 from reprosim.fetal import assign_fetal_arrays, fetal_model
 
+######################################################
+# This would be what is replaced by Manchester data
+######################################################
 
 #Doppler image processing
-
 # Load the image containing the waveform
 IMG='myImage.png'
 image = cv2.imread(IMG, cv2.IMREAD_GRAYSCALE)
@@ -56,6 +59,12 @@ if contours:
 
     y_coordinates_cms = [y * cms_scale for y in y_coordinates_pixels]
     y_coordinates = y_coordinates_cms
+
+
+###############################################
+#Start of the tetal model
+################################################
+
 
 ## Define time points at which you want to plot flows
 dt=0.01 #time step for plotting
@@ -226,13 +235,19 @@ def main():
 
     fetal_model(export_directory+'/',dt,num_heart_beats,T_beat,T_vs,T_as,T_v_delay,U0RV,EsysRV,EdiaRV,RvRV,U0LV,EsysLV,EdiaLV,RvLV,U0A,V0V,V0A)
 
+    d = np.loadtxt(export_directory+'/results_element_flow.out', delimiter=",")
+    endpoint = len(d[:,23])#-int((T_beat-T_v_delay)/dt)
+    startpoint = len(d[:,23])-int(T_beat/dt*2.)
+    signal = d[startpoint:endpoint, 18]
+    peaks, _ = find_peaks(-1*signal)
 
+    '''
     ############################################
     # PLOT RESULTS
     #############################################
     d = np.loadtxt(export_directory+'/results_element_flow.out', delimiter=",")
-    endpoint = len(d[:,23])
-    startpoint = len(d[:,23])-int(T_beat/dt*2.)
+    endpoint = len(d[:,23])#-int((T_beat-T_v_delay)/dt)
+    startpoint = len(d[:,23])-int(T_beat/dt)
     startpoint1 = len(d[:,23])-int(T_beat/dt)
     # Element 21 is the MCA,add 1 because of time variables
     r = 1.4  # mm
@@ -248,6 +263,7 @@ def main():
     r = 0.9  # mm
     plt.plot(d[startpoint:endpoint, 0] - d[startpoint, 0], d[startpoint:endpoint, 29] / (10. * np.pi * r ** 4.))  #
     plt.show()
+    '''
     # Element 18 is the umbilical artery
     # Umbilical artery radius
     fig, ax1 = plt.subplots()
@@ -256,10 +272,11 @@ def main():
     ax1.set_ylabel("Velocity (cm/s) - model", color="b")
     ax1.set_title('Umbilical artery Doppler')
     r = inlet_rad  # mm
+    time = d[startpoint:endpoint, 0]- d[startpoint, 0]
     plt.plot(d[startpoint:endpoint, 0] - d[startpoint, 0],
              d[startpoint:endpoint, 18] / (20. * np.pi * r ** 4.), color='b')  # There are two umbolical arteries
+    plt.plot(time[peaks], signal[peaks]/ (20. * np.pi * r ** 4.), "x")
     plt.show()
-
 if __name__ == '__main__':
     main()
 
